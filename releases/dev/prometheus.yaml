@@ -1,0 +1,23 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: prometheus
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: prometheus
+    version: 11.1.0
+  values:
+    alertmanager:
+      persistentVolume:
+        storageClass: nfs-client
+    pushgateway:
+      persistentVolume:
+        storageClass: nfs-client
+    server:
+      persistentVolume:
+        storageClass: nfs-client
