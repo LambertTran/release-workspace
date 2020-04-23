@@ -10,5 +10,5 @@ spec:
   releaseName: git2consul
   chart:
     git: git@github.com:LambertTran/git2consul.git
-    path: charts/git2consul
+    path: chart/git2consul
     ref: master
