@@ -1,0 +1,16 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: consul
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: consul
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: consul
+    version: 3.9.5
+  values:
+    StorageClass: nfs-client
