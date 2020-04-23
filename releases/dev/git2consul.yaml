@@ -1,0 +1,14 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: git2consul
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: git2consul
+  chart:
+    git: git@github.com:LambertTran/git2consul.git
+    path: charts/git2consul
+    ref: master
