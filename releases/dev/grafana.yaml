@@ -1,0 +1,16 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: grafana
+    version: 5.0.12
+  values:
+    persistence:
+      storageClassName: nfs-client
