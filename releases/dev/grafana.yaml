@@ -7,6 +7,7 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
+  releaseName: grafana
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com
     name: grafana
