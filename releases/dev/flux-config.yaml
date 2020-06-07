@@ -15,6 +15,6 @@ spec:
   values:
     git:
       url: git@github.com:LambertTran/release-workspace.git
-      secretName: test-ssh
+      secretName: flux-git-deploy
       path: configs/dev
       readonly: true
