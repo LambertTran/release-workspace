@@ -1,0 +1,14 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: housing-analysis
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  releaseName: housing-analysis
+  chart:
+    git: git@github.com:kimdang/housing-analysis.git
+    path: chart/housing-analysis
+    ref: master
