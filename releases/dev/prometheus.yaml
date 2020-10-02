@@ -14,11 +14,19 @@ spec:
     version: 11.1.0
   values:
     alertmanager:
-      persistentVolume:
-        storageClass: nfs-client
+      enabled: false
+    alertmanagerFiles:
+      alertmanager.yml: ""
+    kubeStateMetrics:
+      enabled: false
     pushgateway:
-      persistentVolume:
-        storageClass: nfs-client
+      enabled: false
     server:
       persistentVolume:
         storageClass: nfs-client
+      extraArgs:
+        storage.local.retention: 720h
+    serverFiles:
+      alerts: ""
+      prometheus.yml: ""
+      rules: ""
