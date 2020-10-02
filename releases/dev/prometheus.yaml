@@ -15,8 +15,6 @@ spec:
   values:
     alertmanager:
       enabled: false
-    alertmanagerFiles:
-      alertmanager.yml: ""
     kubeStateMetrics:
       enabled: false
     nodeExporter:
