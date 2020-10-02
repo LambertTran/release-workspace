@@ -26,9 +26,3 @@ spec:
     server:
       persistentVolume:
         storageClass: nfs-client
-      extraArgs:
-        storage.local.retention: 720h
-    serverFiles:
-      alerts: ""
-      prometheus.yml: ""
-      rules: ""
