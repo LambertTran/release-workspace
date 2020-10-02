@@ -13,14 +13,6 @@ spec:
     name: prometheus
     #version: 11.1.0
   values:
-    alertmanager:
-      enabled: false
-    kubeStateMetrics:
-      enabled: false
-    nodeExporter:
-      enabled: false
-    pushgateway:
-      enabled: false
     server:
       persistentVolume:
         storageClass: nfs-client
